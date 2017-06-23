@@ -27,9 +27,9 @@ import matplotlib.pyplot as plt
 
 def set_data(target):
 	x = [np.array([0,0]),
-		 np.array([0,1]),
-	     np.array([1,0]),
-		 np.array([1,1])]
+		np.array([0,1]),
+		np.array([1,0]),
+		np.array([1,1])]
 	bias = np.array([1 for _ in range(4)])
 	# inputs: [x1 | x0 | bias]
 	inputs = np.column_stack((x,bias))
@@ -61,10 +61,10 @@ def run():
 	target = np.array([1,1,1,-1])
 	# Random weights
 	w = np.array([random() for _ in range(3)])
-	print("random weights: {0}".format(w))
+	print("Initial random weights: {0}".format(w))
 	nand = set_data(target)
 	w,error = train(nand,w,eta=0.1,epochs=55)
-	print("weights updated: {0}".format(w))
+	print("Weights updated: {0}".format(w))
 	print("Predicting {0} -> {1}".format([0,0],predict([0,0,1],w)))
 	print("Predicting {0} -> {1}".format([0,1],predict([0,1,1],w)))
 	print("Predicting {0} -> {1}".format([1,0],predict([1,0,1],w)))
