@@ -3,6 +3,7 @@
 This code is the implementation of a perceptron that simulates a NAND gate. In the ``run()`` function, the list ``target`` can be modified to represent another logical gate (has to be Linearly Separable, hence, doesn't works to simulate XOR gate).
 
 ![img1](http://www.ece.utep.edu/research/webfuzzy/docs/kk-thesis/kk-thesis-html/img40.gif)
+## 
 **Note** In the list ``target`` to represent a 0 a -1 should be used.
 
 ## Dependencies
