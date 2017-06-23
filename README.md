@@ -10,7 +10,7 @@ This code is the implementation of a perceptron that simulates a NAND gate. In t
 * python 3
 * numpy
 * random
-* matplotlib
+* matplotlib **optional**
 
 ## Usage
 
