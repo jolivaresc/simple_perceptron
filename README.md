@@ -7,10 +7,10 @@ This code is the implementation of a perceptron that simulates a NAND gate. In t
 ![img1](http://www.ece.utep.edu/research/webfuzzy/docs/kk-thesis/kk-thesis-html/img40.gif "Linearly Separable example")
 
 ## Dependencies
-* python 3
-* numpy
-* random
-* matplotlib **optional**
+* python 3.
+* numpy.
+* random.
+* matplotlib. **(optional)**
 
 ## Usage
 
