@@ -76,7 +76,7 @@ def predict(inputs,w):
 # Display
 
 Plots the outputs of the logical gate and the line that represents the decision boundary.
-The triangles represent a 0 & the circles a 1.
+The triangles represent a 0 & circles a 1.
 
 
 ```python
