@@ -27,19 +27,19 @@ import matplotlib.pyplot as plt
 
 def set_data(target):
 	x = [np.array([0,0]),
-		np.array([0,1]),
-		np.array([1,0]),
-		np.array([1,1])]
+		 np.array([0,1]),
+	     np.array([1,0]),
+		 np.array([1,1])]
 	bias = np.array([1 for _ in range(4)])
 	# inputs: [x1 | x0 | bias]
 	inputs = np.column_stack((x,bias))
 	# return data: [x1 | x0 | bias | target]
 	return [(np.array(i),j) for i,j in zip(inputs,target)]
 
+heaviside = lambda x: 1 if x >= 0 else -1
 
 def train(target,w,eta=0.1,epochs=40):
 	# Activation function
-	heaviside = lambda x: 1 if x >= 0 else -1
 	errors = []
 	#w_tmp = []
 	# Updating weights
@@ -61,18 +61,20 @@ def run():
 	target = np.array([1,1,1,-1])
 	# Random weights
 	w = np.array([random() for _ in range(3)])
-	print("Initial random weights: {0}".format(w))
+	print("random weights: {0}".format(w))
 	nand = set_data(target)
-	w,error = train(nand,w,eta=0.1,epochs=55)
-	print("Weights updated: {0}".format(w))
-	print("Predicting {0} -> {1}".format([0,0],predict([0,0,1],w)))
-	print("Predicting {0} -> {1}".format([0,1],predict([0,1,1],w)))
-	print("Predicting {0} -> {1}".format([1,0],predict([1,0,1],w)))
-	print("Predicting {0} -> {1}".format([1,1],predict([1,1,1],w)))
+	w,error = train(nand,w,eta=0.1,epochs=65)
+	print("weights updated: {0}".format(w))
+	print("Predicting\tAproximation\tResult")
+	print("{0}\t\t{1:.5f}\t\t{2}".format([0,0],np.dot([0,0,1],w),predict([0,0,1],w)))
+	print("{0}\t\t{1:.5f}\t\t{2}".format([0,1],np.dot([0,1,1],w),predict([0,1,1],w)))
+	print("{0}\t\t{1:.5f}\t\t{2}".format([1,0],np.dot([1,0,1],w),predict([1,0,1],w)))
+	print("{0}\t\t{1:.5f}\t{2}".format([1,1],np.dot([1,1,1],w),predict([1,1,1],w)))
+
+
 
 if __name__ == '__main__':
 	run()
-
 
 
 
