@@ -17,10 +17,11 @@ This code is the implementation of a perceptron that simulates a NAND gate. In t
 Run ``python3 perceptron.py`` to see the results:
 
         ```
-        initial random weights: [ 0.72451334  0.12365737  0.72032936]
-        weights updated: [-0.07548666 -0.27634263  0.32032936]
-        Predicting [0, 0] -> 1
-        Predicting [0, 1] -> 1
-        Predicting [1, 0] -> 1
-        Predicting [1, 1] -> -1
+        random weights: [ 0.94734709  0.77761066  0.92809446]
+        weights updated: [-0.25265291 -0.22238934  0.32809446]
+        Predicting	Aproximation	Result
+        [0, 0]		0.32809		1
+        [0, 1]		0.10571		1
+        [1, 0]		0.07544		1
+        [1, 1]		-0.14695	-1
         ```
