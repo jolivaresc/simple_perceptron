@@ -22,7 +22,7 @@ def set_data(target):
 	x = [np.array([0,0]),
 		 np.array([0,1]),
 	     np.array([1,0]),
-		 np.array([1,1])]
+	 	np.array([1,1])]
 	bias = np.array([1 for _ in range(4)])
 	# inputs: [x1 | x0 | bias]
 	inputs = np.column_stack((x,bias))
@@ -46,7 +46,6 @@ The arguments for the learning rate (`eta`) & number of iterations (`epochs`) ar
 
 ```python
 def train(data,w,eta=0.1,epochs=40):
-	# Activation function
 	errors = []
 	#w_tmp = []
 	# Updating weights
@@ -76,7 +75,7 @@ def predict(inputs,w):
 
 # Display
 
-Plotting the outputs of the logical gate and the line that represents the decision boundary.
+Plots the outputs of the logical gate and the line that represents the decision boundary.
 The triangles represent a 0 & the circles a 1.
 
 
